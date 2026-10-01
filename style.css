@@ -1,0 +1,235 @@
+/* 1. Poore page ka setup aur Canva jaisa Background Glow */
+body {
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  /* Torch jaisa roshan dark background */
+  background: radial-gradient(circle, #444444 0%, #111111 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column; /* Sab kuch upar se neeche aik line mei aaye */
+  align-items: center;    /* Sab cheezein screen ke bilkul center mei hon */
+}
+
+/* 2. Main Title (COMPUTER QUIZ GAME) */
+.main-title {
+  color: white;
+  font-size: 2.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Halka sa saya */
+}
+
+/* 3. Har Question ka apna aik alag block/dabba */
+.question-block {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 50px; /* Doosre sawal se thoda fasla rakhne ke liye */
+  display: none;       /* SHURU MEIN HIDE: JavaScript isay khud show karega */
+  flex-direction: column; /* Is block ke andar ki cheezein bhi upar-neeche aayen */
+  gap: 15px;
+  position: relative; /* Score box ko is dabbe ke kone mei chipkane ke liye */
+}
+
+/* 4. Safed Question Box (Rounded Bar) */
+.question-box {
+  background-color: white;
+  border-radius: 50px; /* Corners ko round karne ke liye */
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+}
+
+.question-box h2 {
+  color: black;
+  margin: 0;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+/* 5. Q1, Q2 waala Pink Round Shape */
+.q-star {
+  position: absolute;
+  left: -10px;
+  background-color: #d84b8f;
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%; /* Perfect Gol dabba */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* 6. Options ke containers */
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* 7. Safed Options Buttons */
+.option-btn {
+  background-color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center; /* Pink circle aur text ko aamne-saamne seedha rakhna */
+  cursor: pointer;
+  transition: transform 0.2s; /* Mouse le jaane par halki movement ke liye */
+}
+
+/* Mouse hover karne par button thoda bada hoga */
+.option-btn:hover {
+  transform: scale(1.02);
+}
+
+/* 8. Buttons ke andar ke Pink Circles ka basic design */
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%; /* Gola banane ke liye */
+  margin-right: 15px;
+  flex-shrink: 0; /* Gola chota na ho sake */
+}
+
+/* Canva ke mutabik different options ke alag alag pink colors */
+.circle-1 { background-color: #581845; } /* Dark Purple/Pink */
+.circle-2 { background-color: #900c3f; } /* Medium Pink */
+
+/* 9. Button ke andar ka Text */
+.option-text {
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* 10. Score Box (Bottom Right corner) */
+.score-box {
+  background-color: white;
+  padding: 6px 18px;
+  border-radius: 30px;
+  align-self: flex-end; /* Apne dabba ke bilkul right side par chipak jaye */
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.small-star {
+  color: #d84b8f;
+}
+
+/* Ending Screen ka Style */
+#end-screen {
+  display: none;       /* SHURU MEIN HIDE: Game over screen shuru mein nahi dikhegi */
+  width: 100%;
+  max-width: 600px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.final-score-box {
+  background-color: white;
+  border-radius: 30px;
+  padding: 30px;
+  text-align: center;
+  color: black;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+  width: 80%;
+  margin-top: 20px;
+}
+
+.final-score-box h3 {
+  font-size: 2rem;
+  color: #d84b8f; /* Aapka signature pink rang */
+  margin: 0 0 10px 0;
+}
+
+.final-score-box p {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Welcome Screen & Subtitle Style */
+#welcome-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  color: #d84b8f; /* Aapka signature pink color */
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.welcome-box {
+  background-color: white;
+  border-radius: 30px;
+  padding: 40px 30px;
+  text-align: center;
+  color: black;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+  width: 80%;
+  margin-top: 20px;
+}
+
+.welcome-box p {
+  font-size: 1.3rem;
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+/* Start Button Style */
+#start-btn {
+  background-color: #d84b8f;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 15px 40px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 25px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#start-btn:hover {
+  background-color: #a63a7a;
+  transform: scale(1.05);
+}
+
+/* Play Again Button Style (For ending screen) */
+#restart-btn {
+  background-color: #d84b8f;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#restart-btn:hover {
+  background-color: #a63a7a;
+  transform: scale(1.05);
+}

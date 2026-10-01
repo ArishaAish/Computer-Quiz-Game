@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Quiz Game</title>
+    <!-- CSS Link yahan hai -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="quiz-container">
+  
+  <!-- ==================== WELCOME SCREEN ==================== -->
+  <div id="welcome-screen">
+    <h1 class="main-title">COMPUTER QUIZ GAME<br><span class="subtitle">For Kids</span></h1>
+    <div class="welcome-box">
+      <p>Welcome, Little Genius! 🚀</p>
+      <p>Test your computer knowledge and score 60/60 points!</p>
+      <button id="start-btn">Start Game 🎮</button>
+    </div>
+  </div>
+
+  <!-- ==================== QUESTION 1 ==================== -->
+  <div class="question-block">
+    <div class="question-box">
+      <div class="q-star">Q1</div> 
+      <h2>What is Computer?</h2>
+    </div>
+    <div class="options-container">
+      <button class="option-btn">
+        <span class="circle circle-1"></span>
+        <span class="option-text">A: Computer is a machine.</span>
+      </button>
+      <button class="option-btn">
+        <span class="circle circle-2"></span>
+        <span class="option-text">B: Computer is a human.</span>
+      </button>
+    </div>
+    <div class="score-box">
+      <span>Score = 10</span>
+      <span class="small-star">⭐</span>
+    </div>
+  </div>
+
+  <!-- ==================== QUESTION 2 ==================== -->
+  <div class="question-block">
+    <div class="question-box">
+      <div class="q-star">Q2</div> 
+      <h2>How many buttons a mouse have?</h2>
+    </div>
+    <div class="options-container">
+      <button class="option-btn">
+        <span class="circle circle-1"></span>
+        <span class="option-text">A: One.</span>
+      </button>
+      <button class="option-btn">
+        <span class="circle circle-2"></span>
+        <span class="option-text">B: Two.</span>
+      </button>
+    </div>
+    <div class="score-box">
+      <span>Score = 10</span>
+      <span class="small-star">⭐</span>
+    </div>
+  </div>
+
+  <!-- ==================== QUESTION 3 ==================== -->
+  <div class="question-block">
+    <div class="question-box">
+      <div class="q-star">Q3</div> 
+      <h2>What is the brain of the computer?</h2>
+    </div>
+    <div class="options-container">
+      <button class="option-btn">
+        <span class="circle circle-1"></span>
+        <span class="option-text">A: CPU (Central Processing Unit).</span>
+      </button>
+      <button class="option-btn">
+        <span class="circle circle-2"></span>
+        <span class="option-text">B: Mouse.</span>
+      </button>
+    </div>
+    <div class="score-box">
+      <span>Score = 10</span>
+      <span class="small-star">⭐</span>
+    </div>
+  </div>
+
+  <!-- ==================== QUESTION 4 ==================== -->
+  <div class="question-block">
+    <div class="question-box">
+      <div class="q-star">Q4</div> 
+      <h2>What plays sound from the computer?</h2>
+    </div>
+    <div class="options-container">
+      <button class="option-btn">
+        <span class="circle circle-1"></span>
+        <span class="option-text">A: Speaker.</span>
+      </button>
+      <button class="option-btn">
+        <span class="circle circle-2"></span>
+        <span class="option-text">B: Keyboard.</span>
+      </button>
+    </div>
+    <div class="score-box">
+      <span>Score = 10</span>
+      <span class="small-star">⭐</span>
+    </div>
+  </div>
+
+  <!-- ==================== QUESTION 5 ==================== -->
+  <div class="question-block">
+    <div class="question-box">
+      <div class="q-star">Q5</div> 
+      <h2>Which part of the computer looks like a TV screen?</h2>
+    </div>
+    <div class="options-container">
+      <button class="option-btn">
+        <span class="circle circle-1"></span>
+        <span class="option-text">A: Printer.</span>
+      </button>
+      <button class="option-btn">
+        <span class="circle circle-2"></span>
+        <span class="option-text">B: Monitor.</span>
+      </button>
+    </div>
+    <div class="score-box">
+      <span>Score = 10</span>
+      <span class="small-star">⭐</span>
+    </div>
+  </div>
+
+  <!-- ==================== QUESTION 6 ==================== -->
+  <div class="question-block">
+    <div class="question-box">
+      <div class="q-star">Q6</div> 
+      <h2>Which device is used to type letters and numbers?</h2>
+    </div>
+    <div class="options-container">
+      <button class="option-btn">
+        <span class="circle circle-1"></span>
+        <span class="option-text">A: Monitor.</span>
+      </button>
+      <button class="option-btn">
+        <span class="circle circle-2"></span>
+        <span class="option-text">B: Keyboard.</span>
+      </button>
+    </div>
+    <div class="score-box">
+      <span>Score = 10</span>
+      <span class="small-star">⭐</span>
+    </div>
+  </div>
+
+  <!-- ==================== ENDING SCREEN ==================== -->
+  <div id="end-screen">
+    <div class="question-box">
+      <h2>🎉 GAME OVER 🎉</h2>
+    </div>
+    
+    <div class="final-score-box">
+      <h3 id="final-score">Your Score: 0 / 60</h3>
+      <p id="feedback-text">Great job! You completed the quiz.</p>
+      <button id="restart-btn">Play Again 🔄</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- JavaScript Link yahan hai -->
+<script src="script.js"></script>
+</body>
+</html>
